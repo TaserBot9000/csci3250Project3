@@ -4,11 +4,6 @@ import binascii
 import numpy as np 
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
-
-
-
-
-
 def get_file_stats(filename):
     with open(filename, 'rb') as f:                 #opens file to read binary
         file_bytes = bytearray(f.read())              #stores file content as bytes
@@ -17,7 +12,6 @@ def get_file_stats(filename):
     
 def print_stats(filename):
     mean, std = get_file_stats(filename)            #calls file stats function and assigns mean/std to return val
-
 
     print(f"File: {filename}")                      
     print(f"Mean: {mean}")                          
@@ -37,7 +31,6 @@ def encrypt_and_stats(filename):
     
 def print_encrypted(filename):
     mean, std = encrypt_and_stats(filename)         #calls file stats function and assigns mean/std to return val
-
 
     print(f"Encrypted File: {filename}.encrypted")
     print(f"Mean: {mean}")
